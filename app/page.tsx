@@ -6,9 +6,7 @@ export default function Home() {
       <h1 className="text-3xl font-semibold tracking-tight">
         Solana Next Template
       </h1>
-      <p className="max-w-md text-zinc-500">
-        Connect a wallet to get started.
-      </p>
+      <p className="max-w-md text-zinc-500">Connect a wallet to get started.</p>
       <ConnectButton />
     </main>
   );
