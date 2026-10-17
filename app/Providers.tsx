@@ -3,6 +3,8 @@
 import { type ReactNode } from "react";
 import { ConnectionProvider, WalletProvider } from "@solana/wallet-adapter-react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
+import { PhantomWalletAdapter } from "@solana/wallet-adapter-phantom";
+import { SolflareWalletAdapter } from "@solana/wallet-adapter-solflare";
 
 import "@solana/wallet-adapter-react-ui/styles.css";
 
@@ -11,9 +13,7 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 const ENDPOINT =
   process.env.NEXT_PUBLIC_SOLANA_RPC || "https://api.mainnet-beta.solana.com";
 
-// Wallets that support the Wallet Standard register themselves and show up in
-// the modal automatically, so no adapters are needed.
-const wallets: never[] = [];
+const wallets = [new PhantomWalletAdapter(), new SolflareWalletAdapter()];
 
 export default function Providers({ children }: { children: ReactNode }) {
   return (
