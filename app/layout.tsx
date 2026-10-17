@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Solana Next Template",
-  description: "Next.js starter with Phantom and Solflare wallet connect.",
+  description: "Next.js starter with a Connect Wallet button.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
