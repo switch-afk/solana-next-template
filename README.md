@@ -1,6 +1,6 @@
 # solana-next-template
 
-Minimal Next.js (App Router, TypeScript, Tailwind) starter with a Connect Wallet button for Solana.
+Next.js (App Router, TypeScript, Tailwind) starter with a Connect Wallet button for Solana.
 
 Click **Connect Wallet**, pick a wallet from the modal, and the app connects and shows the shortened address with a Disconnect button. The wallet reconnects after a page reload.
 
