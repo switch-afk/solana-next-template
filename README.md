@@ -1,12 +1,8 @@
 # solana-next-template
 
-A minimal Next.js starter with a **Connect Wallet** button for Solana. Click it, pick Phantom or Solflare, and the app connects and shows the shortened address with a Disconnect button.
+Minimal Next.js (App Router, TypeScript, Tailwind) starter with a Connect Wallet button for Solana.
 
-- Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 4
-- Official Solana [wallet-adapter](https://github.com/anza-xyz/wallet-adapter) (react, react-ui) with the Phantom and Solflare adapters
-- Wallets that aren't installed show an install link in the modal
-- The wallet reconnects automatically after a page reload
-- One page, one `Providers` component, one `ConnectButton` component
+Click **Connect Wallet**, pick a wallet from the modal, and the app connects and shows the shortened address with a Disconnect button. The wallet reconnects after a page reload.
 
 ## Use this template
 
@@ -45,21 +41,16 @@ NEXT_PUBLIC_SOLANA_RPC=https://your-rpc-provider.example/?api-key=YOUR_KEY
 
 > **Warning:** variables starting with `NEXT_PUBLIC_` are bundled into the browser build and are visible to anyone who opens your site. Never put a secret key here. Use a key that is restricted to your domain in your RPC provider's dashboard.
 
-## How it works
+## Files
 
 | File | Purpose |
 | --- | --- |
-| `app/Providers.tsx` | Wallet-adapter providers: RPC connection, Phantom and Solflare adapters, auto-reconnect, connect modal |
+| `app/Providers.tsx` | Wallet providers: RPC connection, auto-reconnect, connect modal |
 | `app/ConnectButton.tsx` | Connect button, shortened address and disconnect |
 | `app/page.tsx` | The single page |
-| `app/layout.tsx` | Root layout that wraps the app in `Providers` |
 
-To change the wallets, edit the `wallets` array in `app/Providers.tsx`. Other wallets that are installed in the browser and support the Wallet Standard (Backpack, Trust and others) also appear in the modal automatically.
-
-## CI
-
-GitHub Actions runs `npm run lint` and `npm run build` on Node 20 and 22 for every push to `main` and every pull request.
+Wallets that support the Wallet Standard and are installed in the browser appear in the modal automatically.
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE.md)
